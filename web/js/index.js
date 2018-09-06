@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+  $(function () {
+      $.post("visitorServlet",function (data) {
+          var res = data.split(",");
+          $("#current").text("Current Online: "+ res[0]);
+          $("#total").text("Total Visitor: "+ res[1]);
+      })
+  });
+
+
   // typing animation
   (function($) {
     $.fn.writeText = function(content) {

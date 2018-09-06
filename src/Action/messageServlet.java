@@ -1,3 +1,5 @@
+package Action;
+
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import util.DBUtil;
@@ -33,6 +35,8 @@ public class messageServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
         response.getWriter().write("Thank you "+ name +" for your submitting, Have a good one!!!");
 
         /*System.out.println("test for servlet");

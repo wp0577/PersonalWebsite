@@ -3,12 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <listener>
+        <listener-class>listener.SessionCountListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>listener.RequestListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>messageServlet</servlet-name>
-        <servlet-class>messageServlet</servlet-class>
+        <servlet-class>Action.messageServlet</servlet-class>
     </servlet>
-   <servlet-mapping>
+    <servlet>
+        <servlet-name>visitorServlet</servlet-name>
+        <servlet-class>Action.VisitorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
     <servlet-name>messageServlet</servlet-name>
     <url-pattern>/messageServlet</url-pattern>
    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>visitorServlet</servlet-name>
+        <url-pattern>/visitorServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

@@ -84,7 +84,7 @@
     left: 0;
     z-index: 600;
     padding: 10px;
-    width: 200px;
+    width: 350px;
   }
 
   .nav-brand img {
@@ -216,6 +216,7 @@
 
   .aboutme p {
     color: white;
+    opacity: 1;
     font-weight: 100;
     font-size: 17.4px;
   }
